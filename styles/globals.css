@@ -1,16 +1,154 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
+  scrollbar-color: dark;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.wrapper .menu-btn {
+  align-items: center;
+  background: #4a4a4a;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  height: 40px;
+  justify-content: center;
+  left: 20px;
+  top: 10px;
+  transition: all 0.3s ease;
+  width: 40px;
+  z-index: 9999;
+}
+
+#btn:checked~.menu-btn {
+  left: 247px;
+}
+
+.wrapper .menu-btn i {
+  position: absolute;
+  font-size: 23px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .menu-btn .fa-times {
+  position: absolute;
+  opacity: 0;
+  color: lightgray;
+}
+
+#btn:checked~.menu-btn .fa-times {
+  opacity: 1;
+  transform: rotate(-180deg);
+}
+
+#btn:checked~.menu-btn .fa-bars {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+#sidebar {
+  position: fixed;
+  background: #404040;
+  height: 100%;
+  width: 250px;
+  overflow: hidden;
+  left: -250px;
+  transition: all 0.3s ease;
+}
+
+#btn:checked~#sidebar {
+  left: 0;
+}
+
+#sidebar .title {
+  line-height: 60px;
+  background: #333;
+  font-size: 22px;
+  color: #e4e2e2;
+  border-bottom: 1px solid #222;
+  padding-left: 20px;
+  color: cadetblue;
+  text-shadow: 1px 2px 3px black;
+}
+
+#sidebar .title .fa-redo, .fa-sort {
+  display: flex;
+  color: lightgray;
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+  top: 21px;
+  font-size: 18px;
+  width: 55px;
+}
+
+#sidebar .title .fa-redo:active, .fa-sort:active {
+  color: black;
+}
+
+#sidebar .list-items {
+  height: calc(100% - 124px);
+  overflow: auto;
+}
+
+#sidebar .list-items li {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  justify-content: space-around;
+  height: 53px;
+  padding: 0 5px;
+  color: #f2f2f2;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+#sidebar .list-items li:hover {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0px 10px 3px #222;
+}
+
+#sidebar .list-items li .row {
+  display: flex;
+}
+
+#sidebar .list-items li .right {
+  flex: 1;
+  text-align: center;
+  color: darkgrey;
+}
+
+#sidebar .list-items li .left {
+  flex: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: cadetblue;
+  padding-left: 13px;
+}
+
+#sidebar .list-items li .left span {
+  color: beige;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+#sidebar .list-items li .left .location {
+  background: rgba(94, 91, 94, 0.904);
+}
+
+#sidebar .list-items li .left .fa-map-marker {
+  color: bisque;
+  margin: 0 3px;
+  font-size: 11px;
 }

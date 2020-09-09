@@ -28,3 +28,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Description of added libs
+
+I use NEXT.js to generate my project
+I have added the following dependecies and use them:
+----------------------------------------------------------------------------------------------------------------
+
+yarn add react next react-dom redux react-redux next-redux axios redux-devtools-extension redux-thunk
+yarn add @fortawesome/fontawesome-free
+
+----------------------------------------------------------------------------------------------------------------
+ add icons by:
+ 1. yarn add @fortawesome/fontawesome-free
+ 2. // _app.js
+    import '@fortawesome/fontawesome-free/js/fontawesome';
+    import '@fortawesome/fontawesome-free/js/solid';
+    import '@fortawesome/fontawesome-free/js/regular';
+    import '@fortawesome/fontawesome-free/js/brands';
