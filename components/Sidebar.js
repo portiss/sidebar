@@ -92,8 +92,7 @@ class Sidebar extends React.PureComponent {
         <nav id="sidebar">
           <div className="title">Reports 75
             <a onClick={() => this.loadData()}>
-              <i className="fas fa-redo"
-                title="Refresh">
+              <i className="fas fa-redo" title="Refresh">
               </i>
             </a>
             <a onClick={() => this.sortReports()}>

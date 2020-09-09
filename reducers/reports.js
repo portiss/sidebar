@@ -24,7 +24,6 @@ export const loadReports = (query, sortAsc = true) => async dispatch => {
     let compare = sortAsc ? 1 : -1
     result = result.sort((a, b) => (a.name > b.name) ? 1 * compare : -1 * compare)
 
-    console.log(query, result)
     dispatch({
         type: 'LOAD_REPORTS',
         result,
